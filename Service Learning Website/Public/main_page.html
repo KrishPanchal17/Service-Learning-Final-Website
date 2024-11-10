@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main_page_css.css"> <!-- Link to CSS file -->
+    <title>Student Data Tracking</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/Images/Akshar Paaul Logo.jpeg" alt="Logo" class="logo"> <!-- Ensure logo.png matches your actual logo file name -->
+            <h2>AKSHAR PAAUL</h2>
+        </div>
+        
+        <div class="header-buttons">
+            <a href="http://127.0.0.1:5000" class="home-button">Home</a>
+            <a href="http://localhost:2000" class="survey-button">Survey</a>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1>Student Master Data</h1>
+
+         <!-- Search bar for filtering students by name -->
+    <input type="text" id="searchInput" placeholder="Search by Student Name..." onkeyup="searchStudent()">
+    <div class="action-buttons">
+        <button onclick="showAddModal()">Add</button>
+        <button onclick="showEditModal()">Edit</button>
+        <button onclick="deleteRow()">Delete</button>
+    </div>
+        <div class="table-container">
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th>Serial Number</th>
+                        <th>Full Name of the Student</th>
+                        <th>Caste and Sub-caste</th>
+                        <th>Place of Birth</th>
+                        <th>Date, Month, and Year of Birth</th>
+                        <th>Mother's Name</th>
+                        <th>From Which School and Class (Mention if New)</th>
+                        <th>Date of Admission to School</th>
+                        <th>Admitted to Which Class and Section</th>
+                        <th>Mother Tongue</th>
+                        <th>Date of Leaving the School</th>
+                        <th>Left School While in Which Class and Section</th>
+                        <th>Study</th>
+                        <th>Behaviour</th>
+                        <th>Reason for Leaving School, (Whether Fees Paid or Not)</th>
+                        <th>Certificate Issued with Signature and Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Student data will be populated here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Pop-up modal for adding/editing data -->
+    <!-- Pop-up modal for adding/editing data -->
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <h2 id="popupTitle">Add/Edit Student</h2>
+            <!-- Form fields for student details -->
+            <form id="popupForm">
+                <label for="serialNumber">Serial Number:</label>
+                <input type="text" id="serialNumber" required>
+
+                <label for="studentName">Full Name:</label>
+                <input type="text" id="studentName" required>
+
+                <label for="casteSubcaste">Caste and Sub-caste:</label>
+                <input type="text" id="casteSubcaste" required>
+
+                <label for="placeOfBirth">Place of Birth:</label>
+                <input type="text" id="placeOfBirth" required>
+
+                <label for="dob">Date, Month, and Year of Birth:</label>
+                <input type="date" id="dob" required>
+
+                <label for="motherName">Mother's Name:</label>
+                <input type="text" id="motherName" required>
+
+                <label for="schoolAndClass">From Which School and Class (Mention if New):</label>
+                <input type="text" id="schoolAndClass" required>
+
+                <label for="admissionDate">Date of Admission to School:</label>
+                <input type="date" id="admissionDate" required>
+
+                <label for="classAndSection">Admitted to Which Class and Section:</label>
+                <input type="text" id="classAndSection" required>
+
+                <label for="motherTongue">Mother Tongue:</label>
+                <input type="text" id="motherTongue" required>
+
+                <label for="leavingDate">Date of Leaving the School:</label>
+                <input type="date" id="leavingDate">
+
+                <label for="leftInClass">Left School While in Which Class and Section:</label>
+                <input type="text" id="leftInClass">
+
+                <label for="study">Study:</label>
+                <input type="text" id="study">
+
+                <label for="behaviour">Behaviour:</label>
+                <input type="text" id="behaviour">
+
+                <label for="reasonLeaving">Reason for Leaving School, (Whether Fees Paid or Not):</label>
+                <input type="text" id="reasonLeaving">
+
+                <label for="certificateIssued">Certificate Issued with Signature and Date:</label>
+                <input type="text" id="certificateIssued">
+
+                <!-- Buttons for saving or cancelling -->
+                <button type="button" onclick="saveData()">Save</button>
+                <button type="button" onclick="closeModal()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="main_page_js.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>
+
+
+
