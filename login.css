@@ -1,0 +1,403 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url('/static/bg2.jpg') no-repeat center center fixed, 
+                linear-gradient(135deg, #f0f4f8, #d9e4f5);
+    background-size: cover; /* Ensures the image covers the entire background */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #e06586, #0056b3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 50%; /* Makes the logo round */
+    padding: 10px; /* Adds some padding to the logo */
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #ffce00;
+}
+
+.btnLogin-popup {
+    padding: 10px 20px;
+    background-color: #ffce00;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btnLogin-popup:hover {
+    background-color: #e0b700;
+}
+
+/* Landing Section */
+/* Landing Section */
+.landing-section {
+    background: rgba(0, 0, 0, 0.3); /* Add some transparency */
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center; /* Center the text content */
+    align-items: center; /* Align vertically in the center */
+    flex-direction: column; /* Ensures text remains stacked vertically */
+    margin-top: 120px;
+    padding: 80px 20px;
+    position: relative; /* Allows absolute positioning of the logo */
+    width: 100%;
+    text-align: center; /* Ensures text is centered */
+}
+
+/* Landing Logo */
+.landing-logo {
+    width: 200px;
+    position: absolute;
+    top: 20px; /* Adjusts position from top */
+    right: 20px; /* Positions the logo at the right edge */
+    border-radius: 50%; /* Makes the logo round */
+    padding: 10px; /* Adds some padding to the logo */
+    animation: fadeIn 1.5s ease;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.landing-section h2 {
+    font-size: 48px;
+    color: #e06586;
+}
+
+.landing-section p {
+    font-size: 24px;
+    color: white;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.highlight {
+    color: #ffce00;
+}
+
+/* About Us Section */
+/* About Us Section */
+.about-section {
+    background: rgba(0, 0, 0, 0.3); /* Add some transparency */
+    backdrop-filter: blur(5px);/* Light background with slight transparency */
+    padding: 60px 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    min-height: 400px; /* Ensure uniform height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px; /* Soft corners */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px 0; /* Adds spacing from other sections */
+}
+
+.about-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffce00; /* Color for heading */
+}
+
+.about-section p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: white; /* Make text color slightly darker for better readability */
+}
+
+.about-section p span {
+    color: #ffce00;
+    font-weight: bold;
+}
+
+/* Vision and Mission Section */
+.vision-mission-section {
+    padding: 60px 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.3); /* Add some transparency */
+    backdrop-filter: blur(5px); /* Optional: Adds a subtle blur effect */
+    text-align: center;
+    border-radius: 10px;
+    margin: 40px 0;
+}
+
+.vision-mission-section h2 {
+    font-size: 36px;
+    color: #ffce00;  /* Highlight the headings */
+    margin-bottom: 20px;
+}
+
+.vision-mission-section ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.vision-mission-section ul li {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Contact Section - Fixed at the Bottom */
+.contact-section {
+     /* Light background with transparency */
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.3); /* Add some transparency */
+    backdrop-filter: blur(5px);
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    margin: 60px 0;  /* Adds some space before the contact section */
+}
+
+.contact-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-section p, .contact-section ul li {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.contact-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-section ul li {
+    margin: 5px 0;
+    font-weight: 300;
+}
+
+
+/* Forms Section */
+.wrapper {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999; /* Set a high z-index to ensure it appears on top */
+}
+
+
+.form-box {
+    background-color: white;
+    width: 350px;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0056b3;
+}
+
+/* Input Box and Label Styling */
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 5px;
+    background: none;
+    position: relative;
+    transition: border-color 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box select:focus,
+.input-box textarea:focus {
+    border-color: #0056b3;
+}
+
+/* Aligning the icons properly */
+.input-box span.icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #666;
+    z-index: 2;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #666;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Moving label upward when focused or input is filled */
+.input-box input:focus ~ label,
+.input-box input:not(:placeholder-shown) ~ label,
+.input-box select:focus ~ label,
+.input-box select:valid ~ label,
+.input-box textarea:focus ~ label,
+.input-box textarea:not(:placeholder-shown) ~ label {
+    top: -11px;
+    font-size: 12px;
+    color: #0056b3;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    background-color: #ffce00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e0b700;
+}
+
+/* Styling for eye icon */
+.eye-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.eye-icon ion-icon {
+    font-size: 20px;
+    color: #666;
+}
+
+/* Flash messages*/
+.flashed-messages {
+    margin-top: 5px;
+    font-size: 14px;
+    color: red;
+}
+
+ul.flashed-messages {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul.flashed-messages li {
+    color: red;
+}
+
+/* Close Icon */
+.icon-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.icon-close:hover {
+    color: #e06586;
+}
+
+/* Remember and Forget styling */
+.remember-forget {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Autofill handling */
+input:-webkit-autofill {
+    background-color: transparent;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    box-shadow: 0 0 0px 1000px white inset;
+    color: #000;
+    z-index: 1;
+}
+
+input:-webkit-autofill ~ .icon {
+    color: #0056b3;
+    z-index: 2;
+}
+
+input:-webkit-autofill + label {
+    color: #0056b3;
+}
+
+input:-webkit-autofill:focus {
+    border: 1px solid #ccc;
+}
