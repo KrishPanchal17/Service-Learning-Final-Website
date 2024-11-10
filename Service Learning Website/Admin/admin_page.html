@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin_styles.css"> <!-- Link to CSS file -->
+    <title>Library Survey Form</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/Service Learning Project/Public/Images/Akshar Paaul Logo.jpeg" alt="Logo" class="logo"> <!-- Ensure logo.png matches your actual logo file name -->
+            <h2>AKSHAR PAAUL</h2>
+        </div>
+        <a href="http://127.0.0.1:5000" class="home-button">Home</a>
+    </header>
+    
+    <div class="container">
+        <h1>Library Survey Data</h1>
+
+         <!-- Search bar for filtering students by name -->
+    <!-- Updated Search Input Section -->
+    <select id="searchField1" class="search-dropdown">
+        <option value="Teachers Name">Teachers Name</option>
+        <option value="Student Name">Student Name</option>
+        <option value="Std.">Std.</option>
+        <option value="School Name">School Name</option>
+    </select>
+
+    <input type="text" id="searchInput" placeholder="Search...">
+</div>
+
+<div class="action-buttons">
+    <button class="button addButton">Add</button>
+    <button class="button editButton">Edit</button>
+    <button class="button deleteButton">Delete</button>
+</div>
+</div>
+
+<!-- The table remains the same as before -->
+
+
+        <div class="table-container">
+            <table id="libraryTable">
+                <thead>
+                    <tr>
+                        <th>Sr Number</th>
+                        <th>Teachers Name</th>
+                        <th>Contact No</th>
+                        <th>Class Address</th>
+                        <th>Student Name</th>
+                        <th>Gender</th>
+                        <th>Age</th>
+                        <th>School Name</th>
+                        <th>Std.</th>
+                        <th>School Time</th>
+                        <th>Student Contact No</th>
+                        <th>Mothers Education</th>
+                        <th>Fathers Education</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Student data will be populated here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="admin_js.js"></script> <!-- Link to JavaScript file -->
+    <!-- Pop-Up Modal for Add/Edit -->
+<div id="popupModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <h2 id="popupTitle"></h2>
+        <form id="popupForm">
+            <label>Teachers Name: <input type="text" id="teacherName"></label>
+            <label>Contact No: <input type="text" id="contactNo"></label>
+            <label>Class Address: <input type="text" id="classAddress"></label>
+            <label>Student Name: <input type="text" id="studentName"></label>
+            <label>Gender: <input type="text" id="gender"></label>
+            <label>Age: <input type="number" id="age"></label>
+            <label>School Name: <input type="text" id="schoolName"></label>
+            <label>Std.: <input type="text" id="std"></label>
+            <label>School Time: <input type="text" id="schoolTime"></label>
+            <label>Student Contact No: <input type="text" id="studentContactNo"></label>
+            <label>Mothers Education: <input type="text" id="mothersEducation"></label>
+            <label>Fathers Education: <input type="text" id="fathersEducation"></label>
+            <button type="button" id="saveButton">Save</button>
+            <button type="button" id="cancelButton">Cancel</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+
+
+
